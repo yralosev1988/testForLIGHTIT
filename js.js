@@ -1,14 +1,14 @@
 $(window).on("load", function () {
-  sendRequest('https://randomuser.me/api/?results=7&seed=foobar', viewDefaultList, 'GET');
+  sendRequest('https://randomuser.me/api/?page=1&results=10&seed=foobar', viewDefaultList, 'GET');
   $('#searchInput').keyup(function (event) {
     event.preventDefault();
-    sendRequest('https://randomuser.me/api/?results=50&seed=foobar', viewSearchResponse, 'GET');
+    sendRequest('https://randomuser.me/api/?results=10&seed=foobar', viewSearchResponse, 'GET');
   });
   $('#accordion').on('click', 'ul.accordion-item', useAccordion);
   $('#popup').on('click', function (event) {
     event.preventDefault();
     showPopup();
-    sendRequest('https://randomuser.me/api/?results=5000&seed=foobar', viewShowChart, 'GET');
+    sendRequest('https://randomuser.me/api/?results=10&seed=foobar', viewShowChart, 'GET');
   });
   $('#modal_close, #overlay').on('click', hidePopup);
   function sendRequest(url, callback, HttpMethod) {
