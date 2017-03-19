@@ -1,8 +1,8 @@
 $(window).on("load", function () {
   sendRequest('https://randomuser.me/api/?results=7&seed=foobar', viewDefaultList, 'GET');
-  $('#searchSubmit').on('click', function (event) {
+  $('#searchInput').keyup(function (event) {
     event.preventDefault();
-    sendRequest('https://randomuser.me/api/?results=5000&seed=foobar', viewSearchResponse, 'GET');
+    sendRequest('https://randomuser.me/api/?results=50&seed=foobar', viewSearchResponse, 'GET');
   });
   $('#accordion').on('click', 'ul.accordion-item', useAccordion);
   $('#popup').on('click', function (event) {
@@ -31,7 +31,7 @@ $(window).on("load", function () {
     var value = $('#searchInput').val();
     var arrPersons = xhr.responseJSON;
     var source = $("#entry-template").html();
-    var template=Handlebars.compile(source);
+    var template = Handlebars.compile(source);
     arrPersons.results = filterArr(arrPersons.results, value);
     $('#accordion')
       .empty()
