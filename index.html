@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="container">
+  <button id="popup" class="btn btn-1 btn-1a">show chart</button>
+  <form action="" method="GET" class="search">
+    <input type="search" name="" placeholder="поиск" id="searchInput" />
+    <button type="submit" id='searchSubmit' class="button"></button>
+
+  </form>
+  <ul class="clearfix list-head">
+    <li class="last">last</li>
+    <li class="first">first</li>
+    <li class="username">username</li>
+    <li class="phone">phone</li>
+    <li class="city">city</li>
+    <div id="accordion"></div>
+  </ul>
+ </div>
+<div id="modal_form"><!-- Сaмo oкнo -->
+  <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+  <p>Gender users</p>
+  <canvas id="canvas" width="600" height="400">
+    No Love for HTML5 eh?
+  </canvas>
+  <!-- Тут любoе сoдержимoе -->
+</div>
+<div id="overlay"></div>
+<script id="entry-template" type="text/x-handlebars-template">
+  {{#each results}}
+    <ul class="accordion-item">
+      <li>
+        <img src={{picture.thumbnail}} alt="" class="avatar-min">
+      </li>
+      <li class="last">
+        <span>{{name.last}}</span>
+      </li>
+      <li class="first">
+        <span>{{name.first}}</span>
+      </li>
+      <li class="username">
+        <span>{{login.username}}</span>
+      </li>
+      <li class="phone">
+        <span>{{phone}}</span>
+      </li>
+      <li class="city">
+        <span>{{location.city}}</span>
+      </li>
+      <li class="plus-minus">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </li>
+    </ul>
+    <ul class="accordion-data">
+      <li class="user">
+        <span class="user-name">{{name.first}}</span>
+        <span class="fa fa-{{gender}}"></span>
+      </li>
+      <li class="info">
+        <ul class="info-block1">
+          <li>
+            <span>username</span><span>{{login.username}}</span>
+          </li>
+          <li>
+            <span>registered</span><span>{{registered}}</span>
+          </li>
+          <li>
+            <span>email</span><span>{{email}}</span>
+          </li>
+        </ul>
+        <ul class="info-block2">
+          <li>
+            <span>address</span><span>{{location.street}}</span>
+          </li>
+          <li>
+            <span>city</span><span>{{location.city}}</span>
+          </li>
+          <li>
+            <span>zip code</span><span>{{location.postcode}}</span>
+          </li>
+        </ul>
+        <ul class="info-block3">
+          <li>
+            <span>birthday</span><span>{{dob}}</span>
+          </li>
+          <li>
+            <span>phone</span><span>{{phone}}</span>
+          </li>
+          <li>
+            <span>cell</span><span>{{cell}}</span>
+          </li>
+        </ul>
+      </li>
+      <li class="avatar">
+        <img src={{picture.large}} alt=""  class="avatar-large">
+      </li>
+    </ul>
+    {{/each}}
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="js.js"></script>
+</body>
+</html>

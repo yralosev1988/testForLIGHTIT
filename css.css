@@ -1,0 +1,245 @@
+body{
+  font-size: 12px;
+  font-family:Verdana, sans-serif;
+}
+img{
+  display:block;
+}
+.container{
+  max-width:1200px;
+  min-width:1100px;
+  margin:0 auto;
+  padding:50px;
+}
+
+.list-head{
+  background-color: rgba(236, 240, 241,1.0);
+  padding: 10px 12px 12px 12px;
+}
+.list-head li{
+  display: inline-block;
+  text-transform: capitalize;
+  vertical-align: middle;
+}
+.list-head>li:first-child {
+  margin-left: 95px;
+}
+.last{
+  margin-left: 22px;
+  width: 12%;
+}
+.first{
+  margin-left: 40px;
+  width: 12%;
+}
+.username{
+  margin-left: 42px;
+  width: 12%;
+}
+.phone{
+  margin-left: 44px;
+  width: 12%;
+}
+.city{
+  margin-left: 42px;
+  width: 12%;
+}
+.plus-minus{
+  margin-left: 38px;
+  width:5%;
+}
+.plus-minus i{
+  font-size: 40px;
+  color: gray;
+}
+
+ul.accordion-data {
+  display:none;
+}
+#accordion>ul:nth-child(4n+1),
+#accordion>ul:nth-child(4n+2){
+  background-color: rgba(189, 195, 199,1.0);
+}
+#accordion>ul:nth-child(4n+3),
+#accordion>ul:nth-child(4n+4) {
+  background-color: rgba(236, 240, 241,1.0);
+}
+.accordion-item li{
+  font-weight: normal;
+  cursor:pointer;
+}
+.accordion-item li:first-child{
+  width:53px;
+  margin-left: 16px;
+}
+.accordion-data .user{
+  display: block;
+  padding-top: 20px;
+  margin-left: 80px;
+  font-size: 26px;
+}
+.accordion-data .info{
+  vertical-align: top;
+  margin-top: 10px;
+}
+.info-block1{
+  display: inline-block;
+  margin-left: 80px;
+}
+.info-block2{
+  display: inline-block;
+  margin-left: 80px;
+}
+.info-block3{
+  display: inline-block;
+  margin-left: 80px;
+}
+.info li{
+  display:block;
+  margin-top: 10px;
+  font-size: 10px;
+}
+.info li :first-child{
+font-weight: bold;
+  margin-right: 5px;
+}
+.avatar-min{
+  border:2px solid white;
+  border-radius: 50%;
+}
+.avatar-large{
+  border:2px solid white;
+  border-radius: 50%;
+}
+.avatar{
+  margin-left: 100px;
+  margin-bottom:35px ;
+}
+
+#modal_form {
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background: #fff;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -300px;
+  display: none;
+  opacity: 0;
+  z-index: 5;
+  padding: 20px 10px;
+}
+#modal_form #modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+#overlay {
+  z-index:3;
+  position:fixed;
+  background-color:#000;
+  opacity:0.8;
+  -moz-opacity:0.8;
+  filter:alpha(opacity=80);
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  cursor:pointer;
+  display:none;
+}
+
+#popup{
+  float:left
+}
+.search{
+  float:right;
+}
+.clearfix{
+  clear:both;
+}
+
+
+
+* {box-sizing: border-box;}
+form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+input, .button {
+  outline: none;
+  background: transparent;
+}
+input {
+  width: 100%;
+  height: 42px;
+  padding-left: 15px;
+  border: 3px solid darkgray;
+}
+
+.button {
+  border: none;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: darkgray;
+}
+input:focus {
+  border-color: gray;
+}
+input[type="search"]::-webkit-search-cancel-button { /* псевдо что-то, что отвечает за кнопку очистки */
+  -webkit-appearance: none; /* без сброса оформление не применится */
+
+
+}
+
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px 80px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-1 {
+  border: 3px solid darkgrey;
+  color: darkgrey;
+}
+.btn-1a:hover,
+.btn-1a:active {
+  color: black;
+  border: 3px solid gray;
+}
